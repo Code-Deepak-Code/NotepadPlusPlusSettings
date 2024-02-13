@@ -1,0 +1,41 @@
+16
+In mysql console:
+DROP USER 'root'@'192.168.29.200';
+CREATE USER 'root'@'%' IDENTIFIED BY 'Admin@12345';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
+ALTER USER 'dracil'@'192.168.29.200' IDENTIFIED WITH mysql_native_password BY 'Admin@12345';
+
+CREATE USER 'dracil'@'192.168.29.200' IDENTIFIED WITH authentication_plugin BY 'Admin@12345';
+
+UPDATE mysql.user SET Host='%' WHERE Host='localhost' AND User='username';
+
+UPDATE mysql.user SET Host='localhost' WHERE User='root';
+
+UPDATE mysql.db SET Host='192.168.29.200' WHERE Host='192.168.29.200' AND User='root';
+
+docker pull container-registry.oracle.com/database/express:latest
+
+
+Coordinate with hiring managers to identify staffing needs
+Determine selection criteria
+Source potential candidates through online channels (e.g. social platforms and professional networks)
+Evaluating applications and screening candidates via calls or emails, as well as facilitating pre-interview assessment
+Plan interview and selection procedures, including screening calls, assessments and in-person interviews
+Assess candidate information, including resumes and contact details, using our Applicant Tracking System
+Design job descriptions and interview questions that reflect each positions requirements
+Organize and attend job fairs and recruitment events
+Forecast quarterly and annual hiring needs by department
+Developing hiring strategies and procedures in line with industry trends, as well as keeping informed of advancements in the field.
+Foster long-term relationships with past applicants and potential candidates
+
+docker pull container-registry.oracle.com/database/enterprise:latest
+
+docker pull container-registry.oracle.com/database/standard
+
+docker pull container-registry.oracle.com/database/express:latest
+
+create learnOraclePdb identified by Admin12345
+
+GRANT ALL PRIVILEGES TO your_username;

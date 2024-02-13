@@ -1,0 +1,109 @@
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+@Builder
+@Entity(name = "CustomerOrder")
+@NamedEntityGraph(
+        name = "order-entity-graph-with-orderItems",
+        attributeNodes = {
+                @NamedAttributeNode("orderNumber"),
+                @NamedAttributeNode("orderDate"),
+                @NamedAttributeNode(value = "orderItems", subgraph = "orderItemsSubgraph"),
+        },
+        subgraphs = {
+                @NamedSubgraph(
+                        name = "orderItemsSubgraph",
+                        attributeNodes = {
+                                @NamedAttributeNode("productName"),
+                                @NamedAttributeNode("price"),
+                                @NamedAttributeNode("quantity"),
+                                @NamedAttributeNode("order")
+                        }
+                )
+        }
+)
+public class Order {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String orderNumber;
+    private Date orderDate;
+
+    //TODO do one poc in the same project using set collection instead of List
+//    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
+//    private Set<OrderItem> orderItems = new HashSet<>();
+
+    //mappedBy = "order", order is the field name of Order object inside OrderItem
+    @OneToMany(
+            mappedBy = "order", // This is the name of the Order type variable inside orderItem entity, since this is a bidirectional relationship
+            fetch = FetchType.EAGER,
+            // cascade = CascadeType.ALL: If we perform any ooperation on order entity, that operation will also be cascaded to order item entity
+            //such as PERSIST, MERGE, REMOVE, DETACH, REFRESH, ALL (This includes all of the above cascade options.)
+            cascade = CascadeType.ALL,
+            orphanRemoval = true // If order is deleted, all orderItem wil also be removed
+    )
+    private List<OrderItem> orderItems = new ArrayList<>();
+
+    public void addOrderItem(OrderItem orderItem) {
+        orderItems.add(orderItem);
+        orderItem.setOrder(this);
+    }
+
+    public void removeOrderItem(OrderItem orderItem) {
+        orderItems.remove(orderItem);
+        orderItem.setOrder(null);
+    }
+
+}
+
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+@Builder
+@Entity (name = "Order_Item")
+public class OrderItem {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String productName;
+    private Double price;
+
+    @Basic(fetch = FetchType.LAZY)
+    private Integer quantity;
+
+    /**
+     * The reason for puttign @JsonIgnore : If you remove this annotation, then while saving the Order,
+     * When you serialize an Order object, it tries to serialize its associated OrderItem objects, which in turn reference the parent Order object, leading to a cyclic reference.
+     * As as result we will get, equest processing failed: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Infinite recursion (StackOverflowError)] with root cause
+     * java.lang.StackOverflowError: null
+     */
+    @ManyToOne
+//    @ManyToOne(fetch = FetchType.LAZY) // Default behaviour is eager for ManyToOne if you override fetch type to lazy, you will see two queries, else only one query in the console after enabling hibernate logs.
+    @JoinColumn(name = "order_id") // This is the name of order column inside Order_Item table. We need to set each order explicitly on orderItems field of order entity
+    @JsonIgnore
+    private Order order;
+}
+
+I have this method in OrderItem repository
+@EntityGraph(value = "Order.orderItems", type = EntityGraph.EntityGraphType.LOAD)
+    List<OrderItem> findByOrderId(Long orderId);
+		
+		when this method is being called, I am getting an error as
+		
+		2024-02-07T15:43:30.217+05:30 ERROR 33956 --- [nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.InvalidDataAccessApiUsageException: The given JpaEntityGraph [name=Order.orderItems, type=LOAD, attributePaths=[]] is not dynamic] with root cause
+
+java.lang.IllegalArgumentException: The given JpaEntityGraph [name=Order.orderItems, type=LOAD, attributePaths=[]] is not dynamic
+
+What is the difference between these two @EntityGraph methods and annotations
+@EntityGraph(value = "Order.orderItems", type = EntityGraph.EntityGraphType.LOAD)
+    List<OrderItem> findByOrderId(Long orderId);
+		
+	
+
+@EntityGraph(value = "order-entity-graph-with-orderItems", type = EntityGraph.EntityGraphType.LOAD)
+    List<OrderItem> findByOrderId(Long orderId);

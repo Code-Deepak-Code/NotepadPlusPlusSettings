@@ -1,0 +1,40 @@
+/products/save
+
+/products/product-asPureflux
+
+/products/product-asListOfFlux
+
+/products/product-asListOfMono
+
+/products/product-range
+
+/products/update/edfa2908-60c4-4171-b7ff-296ac91d3cdd
+
+/products/delete/{id}
+
+
+
+
+
+
+
+
+@Repository
+public interface ProductReactiveRepository extends ReactiveCrudRepository<Product, Long> {
+    Flux<ProductDto> findByPriceBetween(Range<Double> priceRange);
+}
+
+@Service
+@Slf4j
+//@RequiredArgsConstructor
+public class ProductService {
+
+    @Autowired
+    private ProductReactiveRepository reactiveCrudRepository;
+
+If I am using @Autowired then I am gettign an error as
+
+Field reactiveCrudRepository in com.demo.react.jpa.reactivecrud.service.ProductService required a bean of type 'com.demo.react.jpa.reactivecrud.dao.repository.ProductReactiveRepository' that could not be found.
+
+
+search-ms:displayname=Search%20Results%20in%20Profsnl&crumb=location:E%3A%5CProfsnl\Interview

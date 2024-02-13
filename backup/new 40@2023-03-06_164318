@@ -1,0 +1,41 @@
+class Singleton {
+public static final Singleton singleton = null;
+
+static Singleton getInstance(){
+if(singleton == null) {
+return new Singleton();
+}
+}
+}
+
+
+class Singleton {
+public static final Singleton singleton = null;
+
+static Synchronozed Singleton getInstance(){
+if(singleton == null) {
+return new Singleton();
+}
+}
+}
+
+class Singleton {
+public static final Singleton singleton = null;
+
+static Synchronozed Singleton getInstance(){
+if(singleton == null) {
+sysnchronized(Singleton.class) {
+if(singleton ==null){
+return new Singleton();
+}
+}
+}
+}
+}
+
+exp -6.5+
+Joined Acc in 2021
+Worked in various domains including telecom
+Free time - Binge watch, play tt, vidoe games, sometimes cooking and most importantly I like coding
+And I look forward to collaborate and work with you guys.
+

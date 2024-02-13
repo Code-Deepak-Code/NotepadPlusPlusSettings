@@ -1,0 +1,48 @@
+I have this properties file 
+spring:
+  datasource:
+#    driver-class-name: #It will be provided by Spring-data-Jpa behind the scene from mysql connector jar provided in the build.gradle file
+    password: Admin@12345
+    url: jdbc:mysql://localhost:3306/ecommerce?allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+
+logging:
+  level:
+    org.hibernate.sql: DEBUG
+		
+hibernate is not generating the sql logs. can you tell why
+
+I used the WSReset tool as mentioned and restarted the system after sunning command. but not still ms (means microsoft store) not working.
+
+This is my powershell version:
+Name                           Value                                                                                    ----                           -----                                                                                    PSVersion                      5.1.22000.282
+PSEdition                      Desktop
+PSCompatibleVersions           {1.0, 2.0, 3.0, 4.0...}
+BuildVersion                   10.0.22000.282
+CLRVersion                     4.0.30319.42000
+WSManStackVersion              3.0
+PSRemotingProtocolVersion      2.3
+SerializationVersion           1.1.0.1
+
+Then I tried this command,
+Get-AppXPackage *Microsoft.WindowsStore* | Foreach { Add-AppxPackage -Register "$($_.InstallLocation)\AppXManifest.xml" }
+
+I am getting this error:
+Add-AppxPackage : Deployment failed with HRESULT: 0x80073CF9, Install failed. Please contact your software vendor.
+(Exception from HRESULT: 0x80073CF9)
+Rejecting a request to register from AppxBundleManifest.xml because the manifest is not in the package root.
+NOTE: For additional information, look for [ActivityId] 0f11b12d-5ce5-0005-84e0-110fe55cda01 in the Event Log or use
+the command line Get-AppPackageLog -ActivityID 0f11b12d-5ce5-0005-84e0-110fe55cda01
+At line:1 char:54
++ ... | Foreach { Add-AppxPackage -Register "$($_.InstallLocation)\AppXMani ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Program File...ppXManifest.xml:String) [Add-AppxPackage], IOException
+    + FullyQualifiedErrorId : DeploymentError,Microsoft.Windows.Appx.PackageManager.Commands.AddAppxPackageCommand

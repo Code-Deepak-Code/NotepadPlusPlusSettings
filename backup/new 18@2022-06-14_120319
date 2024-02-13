@@ -1,0 +1,23 @@
+https://igotanoffer.com/blogs/tech/array-interview-questions
+
+
+char arr[] = {b,a,n,a,a,p,p,l,e}
+
+a,p,p,l,e
+
+char brr[] = {a,p,p,l,e}
+
+for(int a = 0, int c = 0; a < arr.lenght; a++,c++) {
+	
+	for(int b = 0; b < brr.lenght; b++) {
+		if(arr[a] == brr[b]) {
+			match = true
+			count++;
+			break;
+		}
+	}
+}
+		
+		
+brr[a] = arr[c]
+

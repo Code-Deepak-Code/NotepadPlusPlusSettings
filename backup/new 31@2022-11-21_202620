@@ -1,0 +1,36 @@
+@Psychology_._motivation
+
+
+It’s not the will to win that matters—everyone has that. 
+It’s the will to prepare to win that matters.
+
+It deploys, manages and scales webapps and services automatically
+It leverage
+EC2,
+S3,
+SNS,
+Elastic Load balancing and
+Auto Scalling
+
+setup :
+Use AWS managment console, cmd interface or API.
+- Choose platform
+- EC2 instance type
+- Additonal resources to use
+  Such as Amazon Relatation database service or Amazon relationsl VPC
+  Then upload the code.
+  It will handle the rest of the deployment details such as
+  Provisioning, Load balancing, Auto scaling and application health monitoring
+  
+VPC - Private network to deploy your resources.
+It's a regional resource. which means if we have two regiions then we will have a two seperate vpc.
+
+Subnet - Partition your newtok inside VPC. For instance you can partition your vpc into say 2 subnets. One subnet you can make as public whereas onther can be private subnet.
+Public subnet can be accessed by www. Private subnet cannot be accessed via www/internet.
+
+Similar to data flow in programming. We have to define network between different subnets. That can be done using Route tables.
+
+ 
+
+
+

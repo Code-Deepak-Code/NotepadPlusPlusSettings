@@ -1,0 +1,27 @@
+37000000045707025
+
+Ghee
+	- related to healht
+	- 
+
+Aachar -
+	- high shelf life
+	- good profit
+	- related to health
+
+https://techmaster.mcafee.com
+
+Hey how are you How are you 
+
+Get-AppxPackage -allusers Microsoft.WindowsStore | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register “$($_.InstallLocation)\\AppXManifest.xml”}
+
+Add-AppxPackage -register "C:\Program Files\WindowsApps\Microsoft.WindowsStore_11809.1001.8.0_x64__8wekyb3d8bbwe" –DisableDevelopmentMode
+
+Add-AppxPackage -register “C: \ Program Files \ WindowsApps \ Microsoft.WindowsStore_11809.1001.8.0_x64__8wekyb3d8bbwe” –DisableDevelopmentMode
+
+
+Microsoft.WindowsStore_12107.1001.15.0_x64__8wekyb3d8bbwe
+
+Get-AppXPackage *WindowsStore* -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
+
+https://service.mcafee.com/?articleId=TS102062&page=shell&shell=article-view

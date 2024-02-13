@@ -1,0 +1,21 @@
+
+
+char[] roateArr(char a[]) {
+char a[] = {'a','b', 'c', 'd'};
+
+d, c, b, a
+
+int start = 0;
+int end = n-1;
+
+while(end >= start) {
+
+a[start] = a[end];
+
+start++;
+end--;
+}
+
+
+
+}

@@ -1,0 +1,38 @@
+@Entity
+public class Post {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String subject;
+    @OneToMany(mappedBy = "post")
+    private List<Comment> comments = new ArrayList<>();
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn
+    private User user;
+    //...
+}
+
+@Entity
+@NamedEntityGraph(name = "Post.subjectAndComments", attributeNodes = {
+    @NamedAttributeNode("subject"),
+    @NamedAttributeNode("comments")
+})
+
+public interface PostRepository extends JpaRepository<Post, Long> {
+
+    @EntityGraph(value = "Post.subjectAndComments", type = EntityGraph.EntityGraphType.FETCH)
+    Post findWithSubjectAndCommentsById(Long id);
+}
+
+public interface PostRepository extends JpaRepository<Post, Long> {
+
+    @EntityGraph(attributePaths = {"comments"}, type = EntityGraph.EntityGraphType.FETCH)
+    Post findWithCommentsById(Long id);
+}
+
+in the both above code both subject and comments will be loaded eagerly,
+which code to use when. By code I mean findWithSubjectAndCommentsById annotated with 
+@EntityGraph(value = "Post.subjectAndComments", type = EntityGraph.EntityGraphType.FETCH) and findWithCommentsById
+annotated with @EntityGraph(attributePaths = {"comments"}, type = EntityGraph.EntityGraphType.FETCH).

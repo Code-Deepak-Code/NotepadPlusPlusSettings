@@ -1,0 +1,17 @@
+Microservices Design Patterns
+Circuti Breaker (Resilience4j), Logging, Distributed Tracing (Zipkin), Observability (Prometheus + Graphana)
+CQRS, SAGA, Transactionl Outbox Patterns
+
+How to handle security in microservices?
+Using Keycloak
+
+Which rest client we use to cal microservices?
+RestTemplate
+
+
+** Which client you use to call the other microservices within your architecture and why.
+Ans. RestTemplate and WebClient (WebClient has advantage since it will not only call other microservices but will also do 
+loadbalacing work through eureka server. Eureka will have many instance of the same application running on different port. 
+WebClient will distribute the http request based on certain algos which decides on which instance it shoud send the current
+request to.)
+

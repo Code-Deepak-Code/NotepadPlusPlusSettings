@@ -1,0 +1,21 @@
+MOS should be min. 35% upto 50%.
+
+6 buy 1666 avg = 6. MOS (margin of safety) = 0
+10 buy 1000 avg = 7.5 MOS = 25
+				= 8.1 = 35
+
+6 buy 1666 avg = 6. MOS (margin of safety) = 0
+
+Target is to compute MOS.
+
+6 buy 1 avg = 6. MOS (margin of safety) = 0
+10 buy 1 avg = 7.5 MOS = 25
+		2 avg =	 8.1 = 35
+		
+		echo dump | nc localhost 2181 | grep -i broker | xargs /brokers/ids/0
+		
+admin:
+      properties:
+        bootstrap-servers: vars-HP-Notebook:9092, vars-HP-Notebook:9093, vars-HP-Notebook:9094
+		
+		docker run -d -h 192.168.29.200 -e /home/deepak/ORACLE_SID=XE --env-file ora_db_env.dat -p 1521:1521 --shm-size="8g" container-registry.oracle.com/database/express

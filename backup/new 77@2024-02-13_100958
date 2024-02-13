@@ -1,0 +1,4 @@
+Experience Letters or Relieving Letters
+
+Every column in my sheet, starting from column H is denoting the date. For example H column is Mon 1 January, I column is Tue 2 January etc.
+I have configured date starting from January from column H till march 31st column CT. I want the column having the current date next to column E. Can you write a script a script for this.

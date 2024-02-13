@@ -1,0 +1,34 @@
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVPrinter;
+
+public class CsvWriter {
+
+    public static void main(String[] args) throws IOException {
+        List<String> headers = new ArrayList<>();
+        headers.add("Name");
+        headers.add("Age");
+        headers.add("Gender");
+
+        List<List<String>> rows = new ArrayList<>();
+        rows.add(List.of("John", "25", "Male"));
+        rows.add(List.of("Jane", "30", "Female"));
+        rows.add(List.of("Bob", "35", "Male"));
+
+        File csvFile = new File("output.csv");
+        FileWriter writer = new FileWriter(csvFile);
+
+        CSVPrinter csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT.withHeader(headers.toArray(new String[0])));
+        for (List<String> row : rows) {
+            csvPrinter.printRecord(row);
+        }
+        csvPrinter.flush();
+    }
+}
+
+E:\Profsnl\Wrk1\Workspaces\BackEnd\Java_wrkspace\Intelij\_v3\GroovyTestingPractice1.0\SpringbootValidatorAndExceptoinHandler

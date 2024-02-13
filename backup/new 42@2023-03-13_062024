@@ -1,0 +1,45 @@
+https://www.youtube.com/watch?v=P5sAaFY3O2w
+
+docker exec -it compassionate_rosalind bash -c "source /home/oracle/.bashrc; sqlplus /nolog"
+
+netstat -na | grep :1521
+
+iptables -A INPUT -p tcp --dport 1521 -j ACCEPT
+
+nmap localhost -p 1521
+
+docker run --env-file ora_db_env.dat -p 7070:1521 --name oracle-exp22 --shm-size="8g" container-registry.oracle.com/database/express
+
+7af9f0ff0ec4
+
+ docker exec -it oracle-exp23 bash -c "source /home/oracle/.bashrc; sqlplus /nolog"
+ 
+container-registry.oracle.com/
+
+docker pull container-registry-hyderabad.oracle.com/database/enterprise:latest
+
+docker run -d --name oracle-enterprise1 container-registry.oracle.com/database/enterprise:21.3.0.0
+
+
+docker run -d -p 1521:1521 --name oracle-enterprise2 container-registry.oracle.com/database/enterprise:21.3.0.0
+
+docker logs oracle-enterprise1
+
+Global Database Name:ORCLCDB
+System Identifier(SID):ORCLCDB
+
+docker exec -it oracle-enterprise2 bash -c "source /home/oracle/.bashrc; sqlplus /nolog"
+
+
+changing the default password:
+docker exec oracle-enterprise2 ./setPassword.sh Admin@12345
+
+Password is Admin@12345
+
+docker ps
+then copy the container id 
+docker commit CONTAINER_ID  CONTAINER_NAME:TAG
+
+docker commit 2d5a9350c6cf container-registry.oracle.com/database/enterprise:21.3.0.0
+
+docker run -d -p 1521:1521 2d5a9350c6cf 

@@ -1,0 +1,28 @@
+arr[] = {1,2,3}
+
+for(int i = 0; i<arr.lenght; i++) {
+	if(arr[i] < arr[i+1])
+		
+
+}
+
+
+{Chaman=Customer(id=3, name=Chaman, email=Chaman@gmail.com, phoneNumbers=[923334447, 923334845]), Aman=Customer(id=1, name=Aman, email=aman@gmail.com, phoneNumbers=[923334444, 923334445]), Gaman=Customer(id=4, name=Gaman, email=Gaman@gmail.com, phoneNumbers=[923334448, 923334495]), Bman=Customer(id=2, name=Bman, email=Bman@gmail.com, phoneNumbers=[923334446, 923334449]), Gagan=Customer(id=5, name=Gagan, email=Gagan@gmail.com, phoneNumbers=[923334449, 923334495])}
+
+
+
+{Chaman=Customer(id=3, name=Chaman, email=Chaman@gmail.com, phoneNumbers=[923334447, 923334845]), Aman=Customer(id=1, name=Aman, email=aman@gmail.com, phoneNumbers=[923334444, 923334445]), Gaman=Customer(id=4, name=Gaman, email=Gaman@gmail.com, phoneNumbers=[923334448, 923334495]), Bman=Customer(id=2, name=Bman, email=Bman@gmail.com, phoneNumbers=[923334446, 923334449]), Gagan=Customer(id=5, name=Gagan, email=Gagan@gmail.com, phoneNumbers=[923334449, 923334495])}
+
+
+{1=Customer(id=1, name=Aman, email=aman@gmail.com, phoneNumbers=[923334444, 923334445]), 2=Customer(id=2, name=Bman, email=Bman@gmail.com, phoneNumbers=[923334446, 923334449]), 3=Customer(id=3, name=Chaman, email=Chaman@gmail.com, phoneNumbers=[923334447, 923334845]), 4=Customer(id=4, name=Gaman, email=Gaman@gmail.com, phoneNumbers=[923334448, 923334495]), 5=Customer(id=5, name=Gagan, email=Gagan@gmail.com, phoneNumbers=[923334449, 923334495])}
+
+
+{1=Customer(id=1, name=Aman, email=aman@gmail.com, phoneNumbers=[923334444, 923334445]), 2=Customer(id=2, name=Bman, email=Bman@gmail.com, phoneNumbers=[923334446, 923334449]), 3=Customer(id=3, name=Chaman, email=Chaman@gmail.com, phoneNumbers=[923334447, 923334845]), 4=Customer(id=4, name=Gaman, email=Gaman@gmail.com, phoneNumbers=[923334448, 923334495]), 5=Customer(id=5, name=Gagan, email=Gagan@gmail.com, phoneNumbers=[923334449, 923334495])}
+
+
+{1=Customer(id=1, name=Aman, email=aman@gmail.com, phoneNumbers=[923334444, 923334445]), 2=Customer(id=2, name=Bman, email=Bman@gmail.com, phoneNumbers=[923334446, 923334449]), 3=Customer(id=3, name=Chaman, email=Chaman@gmail.com, phoneNumbers=[923334447, 923334845]), 4=Customer(id=4, name=Gaman, email=Gaman@gmail.com, phoneNumbers=[923334448, 923334495]), 5=Customer(id=5, name=Gagan, email=Gagan@gmail.com, phoneNumbers=[923334449, 923334495])}
+
+
+{1=Customer(id=1, name=Aman, email=aman@gmail.com, phoneNumbers=[923334444, 923334445]), 2=Customer(id=2, name=Bman, email=Bman@gmail.com, phoneNumbers=[923334446, 923334449]), 3=Customer(id=3, name=Chaman, email=Chaman@gmail.com, phoneNumbers=[923334447, 923334845]), 4=Customer(id=4, name=Gaman, email=Gaman@gmail.com, phoneNumbers=[923334448, 923334495]), 5=Customer(id=5, name=Gagan, email=Gagan@gmail.com, phoneNumbers=[923334449, 923334495])}
+
+

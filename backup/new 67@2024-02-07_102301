@@ -1,0 +1,112 @@
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+@Builder
+@Entity(name = "CustomerOrder")
+@NamedEntityGraph(
+        name = "order-entity-graph-with-orderItems",
+        attributeNodes = {
+                @NamedAttributeNode("orderNumber"),
+                @NamedAttributeNode("orderDate"),
+                @NamedAttributeNode(value = "orderItems", subgraph = "orderItemsSubgraph"),
+        },
+        subgraphs = {
+                @NamedSubgraph(
+                        name = "orderItemsSubgraph",
+                        attributeNodes = {
+                                @NamedAttributeNode("productName"),
+                                @NamedAttributeNode("price"),
+                                @NamedAttributeNode("quantity"),
+                                @NamedAttributeNode("order")
+                        }
+                )
+        }
+)
+public class Order {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String orderNumber;
+    private Date orderDate;
+
+    //TODO do one poc in the same project using set collection instead of List
+//    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
+//    private Set<OrderItem> orderItems = new HashSet<>();
+
+    //mappedBy = "order", order is the field name of Order object inside OrderItem
+    @OneToMany(
+            mappedBy = "order", // This is the name of the Order type variable inside orderItem entity, since this is a bidirectional relationship
+
+            // cascade = CascadeType.ALL: If we perform any ooperation on order entity, that operation will also be cascaded to order item entity
+            //such as PERSIST, MERGE, REMOVE, DETACH, REFRESH, ALL (This includes all of the above cascade options.)
+            cascade = CascadeType.ALL,
+            orphanRemoval = true // If order is deleted, all orderItem wil also be removed
+    )
+    private List<OrderItem> orderItems = new ArrayList<>();
+
+    public void addOrderItem(OrderItem orderItem) {
+        orderItems.add(orderItem);
+        orderItem.setOrder(this);
+    }
+
+    public void removeOrderItem(OrderItem orderItem) {
+        orderItems.remove(orderItem);
+        orderItem.setOrder(null);
+    }
+
+}
+
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+@Builder
+@Entity (name = "Order_Item")
+public class OrderItem {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String productName;
+    private Double price;
+
+    @Basic(fetch = FetchType.LAZY)
+    private Integer quantity;
+
+    /**
+     * The reason for puttign @JsonIgnore : If you remove this annotation, then while saving the Order,
+     * When you serialize an Order object, it tries to serialize its associated OrderItem objects, which in turn reference the parent Order object, leading to a cyclic reference.
+     * As as result we will get, equest processing failed: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Infinite recursion (StackOverflowError)] with root cause
+     * java.lang.StackOverflowError: null
+     */
+    @ManyToOne
+    @JoinColumn(name = "order_id") // This is the name of order column inside Order_Item table. We need to set each order explicitly on orderItems field of order entity
+    @JsonIgnore
+    private Order order;
+}
+
+
+@Repository
+public interface OrderRepository extends JpaRepository<Order, Long> {
+    /**
+     * findAllWithOrderItems() method defines a custom query method that fetches all Order entities along with their associated OrderItem entities eagerly (at the time of application startup).
+     * The @EntityGraph annotation is used to specify the attribute paths to be eagerly fetched, in this case, it's just orderItems.
+     */
+    @EntityGraph(attributePaths = {"orderItems"})
+    List<Order> findAllWithOrderItems();
+		}
+		
+		Unsatisfied dependency expressed through field 'orderRepository': Error creating bean with name 'orderRepository' defined in com.demo.jpa.nonreactive.repository.OrderRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.demo.jpa.nonreactive.repository.OrderRepository.findAllWithOrderItems(); Reason: Failed to create query for method public abstract java.util.List com.demo.jpa.nonreactive.repository.OrderRepository.findAllWithOrderItems(); No property 'findAllWithOrderItems' found for type 'Order'
+		
+		could you please check this error and correct the method in OrderRepository?
+		
+		same error is throwing in these two methods as well written inside OrderRepository. Could you please correct these as well?
+		
+		@EntityGraph(attributePaths = {"orderItems"})
+    Order findByIdWithOrderItems(Long id);
+		
+		@EntityGraph(attributePaths = {"orderNumber", "orderItems.quantity"})
+    List<Order> findAllWithOrderItemsQuantity();

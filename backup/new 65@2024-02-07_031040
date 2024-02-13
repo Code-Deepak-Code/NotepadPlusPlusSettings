@@ -1,0 +1,42 @@
+@NamedEntityGraph(
+        name = "post-entity-graph",
+        attributeNodes = {
+                @NamedAttributeNode("subject"),
+                @NamedAttributeNode("user"),
+                @NamedAttributeNode("comments"),
+        }
+)
+@NamedEntityGraph(
+        name = "post-entity-graph-with-comment-users",
+        attributeNodes = {
+                @NamedAttributeNode("subject"),
+                @NamedAttributeNode("user"),
+                @NamedAttributeNode(value = "comments", subgraph = "comments-subgraph"),
+        },
+        subgraphs = {
+                @NamedSubgraph(
+                        name = "comments-subgraph",
+                        attributeNodes = {
+                                @NamedAttributeNode("user")
+                        }
+                )
+        }
+)
+@Entity
+public class Post {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String subject;
+    @OneToMany(mappedBy = "post")
+    private List<Comment> comments = new ArrayList<>();
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn
+    private User user;
+}
+
+
+In the above @NamedEntityGraph -> subgraphs, I just want to load user out of 4 fields which is id, subject, comments and user.
+Can you give a JpaRepository for this case?

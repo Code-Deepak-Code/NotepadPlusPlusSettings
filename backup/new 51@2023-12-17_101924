@@ -1,0 +1,17 @@
+# Step 1: Enable WSL feature
+Open PowerShell with administrative privileges and run the following command:
+wsl --set-default-version 2
+
+# Step 2: Install Linux distribution
+Open Microsoft Store, search for your desired Linux distribution (e.g., Ubuntu) and install it.
+
+# Step 3: Set up Linux distribution
+Once the installation is complete, launch it and follow the prompts to set up your Linux distribution. This typically involves creating a username and password.
+
+# Step 4: Verify installation
+Open Command Prompt or PowerShell and run the following command:
+wsl --list --verbose
+
+This should show the installed Linux distribution with WSL version 2 as the default.
+
+wsl --list -v

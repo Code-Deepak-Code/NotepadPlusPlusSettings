@@ -1,0 +1,14 @@
+List<String> strList1 = List.of("Apple", "Cat", "Dog", "Cart")
+List<String> strList2 = List.of("Apple", "Cat", "Dog", "Cart")
+List<String> strList2 = List.of("Delhi", "Mumbai", "Japan", "Cart3")
+
+Map<Integer, List<String>> map = HashMap<>();
+map.put(1, strList1);
+map.put(2, strList2);
+map.put(3, strList3);
+map.put(4, strList4);
+map.put(5, strList5);
+map.put(6, strList6);
+
+ List<String> strList = map.entrySet().stream().
+

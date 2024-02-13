@@ -1,0 +1,44 @@
+char a[] = {'b','a','n','a','p','p','l','e'}; 8
+	
+//	char a[] = {'a','p','p','l','e'};
+	
+//	char b[] = {'a','p','p','l','e'};
+	
+	char b[] = {'a','p','p','l','e','o'}; 6
+	a.lenght - aStart > b.length
+	
+	aStart = 0
+	aEnd = 0
+	
+	bEnd = 0
+	
+	match = false
+	bcount = 0
+	
+while(bcount < b.lenght && a.lenght >= b.length) {
+		
+		if (a.length - aStart > b.length) {
+			if(a[aEnd] == b[bEnd]) {
+				aEnd ++
+				bEnd ++
+				match = true
+				bcount++;
+			} else {
+				if(match == true && bEnd != 0)
+					aStart = aEnd
+					bEnd = 0
+				else
+					aStart ++
+					aEnd ++
+				
+				if(bEnd != 0)
+					bEnd = 0
+					
+				bcount = 0
+				match = false
+			}
+			acount++
+		}
+	
+}
+
