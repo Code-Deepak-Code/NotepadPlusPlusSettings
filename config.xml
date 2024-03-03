@@ -22,9 +22,7 @@
         <File filename="\\wsl.localhost\Ubuntu\home\deepak-dev-one\deepak-dev-one-ubuntu-files\GitTest\GitTest1\.gitignore" />
         <File filename="E:\Profsnl\Repositories\Repositories_m1_v1.0.0\GitHubRepos\GitHubRepos_m1_v1.0.0\GitHubDesktop\GitHubDesktop_m1_v1.0.0\CoreJava\Core_Java\Interview\OopsConcept.txt" />
         <File filename="C:\Users\Deepak\My Drive\Intelij-workspaces\Sb-ReactiveJava-Fundamentals\.gitignore" />
-        <File filename="E:\Profsnl\Repositories\Repositories_m1_v1.0.0\GitHubRepos\GitHubRepos_m1_v1.0.0\GitHubDesktop\Misc\CommandsAndShortcuts\Git\Git-cmds\git commands.txt" />
         <File filename="E:\Profsnl\Repositories\Repositories_m1_v1.0.0\GitHubRepos\GitHubRepos_m1_v1.0.0\GitHubDesktop\Misc\CommandsAndShortcuts\Linux\Ubuntu\Ubuntu-CmdsConcepts\Ubuntu-CmdsConcepts.txt" />
-        <File filename="E:\Profsnl\Repositories\Repositories_m1_v1.0.0\GitHubRepos\GitHubRepos_m1_v1.0.0\GitHubDesktop\Misc\CommandsAndShortcuts\Windows\WindowsCommandsAndShortcuts.txt" />
         <File filename="E:\Profsnl\Repositories\Repositories_m1_v1.0.0\GitHubRepos\GitHubRepos_m1_v1.0.0\GitHubDesktop\Misc\CommandsAndShortcuts\NotepadPlusPlus\NotepadPlusPlusShortcuts.txt" />
         <File filename="E:\Profsnl\Repositories\Repositories_m1_v1.0.0\GitHubRepos\GitHubRepos_m1_v1.0.0\GitHubDesktop\Misc\CommandsAndShortcuts\Intelij-idea\intelijidea-key-shortcuts.txt" />
         <File filename="E:\Profsnl\Repositories\Repositories_m1_v1.0.0\GitHubRepos\GitHubRepos_m1_v1.0.0\GitHubDesktop\GitHubDesktop_m1_v1.0.0\CoreJava\Core_Java\Interview\ImportantConcepts_tricker_side.txt" />
@@ -34,7 +32,7 @@
         <ProjectPanel id="1" workSpaceFile="" />
         <ProjectPanel id="2" workSpaceFile="" />
     </ProjectPanels>
-    <FileBrowser latestSelectedItem="E:\Profsnl\Repositories\Repositories_m1_v1.0.0\GitHubRepos\GitHubRepos_m1_v1.0.0\GitHubDesktop\Misc">
+    <FileBrowser latestSelectedItem="E:\Profsnl\Repositories\Repositories_m1_v1.0.0\GitHubRepos\GitHubRepos_m1_v1.0.0\GitHubDesktop\Misc\CommandsAndShortcuts\Windows\WindowsCommandsAndShortcuts.txt">
         <root foldername="E:\Profsnl\Repositories\Repositories_m1_v1.0.0\GitHubRepos\GitHubRepos_m1_v1.0.0\GitHubDesktop\Misc" />
     </FileBrowser>
     <ColumnEditor choice="number">
@@ -91,10 +89,10 @@
         <GUIConfig name="DarkMode" enable="yes" colorTone="0" customColorTop="2105376" customColorMenuHotTrack="4210752" customColorActive="4210752" customColorMain="2105376" customColorError="176" customColorText="14737632" customColorDarkText="12632256" customColorDisabledText="8421504" customColorLinkText="65535" customColorEdge="6579300" customColorHotEdge="10197915" customColorDisabledEdge="4737096" enableWindowsMode="yes" darkThemeName="DarkModeDefault.xml" darkToolBarIconSet="0" darkTabIconSet="2" darkTabUseTheme="no" lightThemeName="" lightToolBarIconSet="4" lightTabIconSet="0" lightTabUseTheme="yes" />
         <GUIConfig name="ScintillaPrimaryView" lineNumberMargin="show" lineNumberDynamicWidth="yes" bookMarkMargin="show" indentGuideLine="show" folderMarkStyle="box" isChangeHistoryEnabled="yes" lineWrapMethod="aligned" currentLineIndicator="1" currentLineFrameWidth="1" virtualSpace="no" scrollBeyondLastLine="yes" rightClickKeepsSelection="no" disableAdvancedScrolling="no" wrapSymbolShow="hide" Wrap="yes" borderEdge="yes" isEdgeBgMode="no" edgeMultiColumnPos="" zoom="2" zoom2="0" whiteSpaceShow="hide" eolShow="hide" eolMode="1" npcShow="show" npcMode="1" npcCustomColor="no" npcIncludeCcUniEOL="no" ccShow="yes" borderWidth="2" smoothFont="no" paddingLeft="0" paddingRight="0" distractionFreeDivPart="4" />
         <GUIConfig name="DockingManager" leftWidth="241" rightWidth="200" topHeight="200" bottomHeight="200">
-            <PluginDlg pluginName="Notepad++::InternalFunction" id="44085" curr="0" prev="4" isVisible="no" />
+            <PluginDlg pluginName="Notepad++::InternalFunction" id="44085" curr="0" prev="4" isVisible="yes" />
             <PluginDlg pluginName="GitSCM.dll" id="4" curr="0" prev="-1" isVisible="no" />
             <PluginDlg pluginName="Notepad++::InternalFunction" id="0" curr="3" prev="-1" isVisible="no" />
-            <ActiveTabs cont="0" activeTab="-1" />
+            <ActiveTabs cont="0" activeTab="0" />
             <ActiveTabs cont="1" activeTab="-1" />
             <ActiveTabs cont="2" activeTab="-1" />
             <ActiveTabs cont="3" activeTab="-1" />
