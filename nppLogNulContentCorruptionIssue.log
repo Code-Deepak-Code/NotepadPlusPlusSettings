@@ -519,3 +519,65 @@
 2024-02-11 18:45:47  C:\Users\Deepak\AppData\Roaming\Notepad++\session.xml  49418/49418 bytes are written.
 2024-02-11 18:45:47  C:\Users\Deepak\AppData\Roaming\Notepad++\session.xml is closed.
 2024-02-11 18:45:47  WM_DESTROY (isEndSessionStarted == true)
+2024-02-14 01:20:33  WM_QUERYENDSESSION (lParam: 0 - ordinary system shutdown/restart) =====================================
+2024-02-14 01:20:33  WM_ENDSESSION (wParam: TRUE, lParam: 0 - ordinary system shutdown/restart)
+2024-02-14 01:20:34  C:\Users\Deepak\AppData\Roaming\Notepad++\config.xml is opened.
+2024-02-14 01:20:34  C:\Users\Deepak\AppData\Roaming\Notepad++\config.xml  10855/10855 bytes are written.
+2024-02-14 01:20:34  C:\Users\Deepak\AppData\Roaming\Notepad++\config.xml is closed.
+2024-02-14 01:20:34  C:\Users\Deepak\AppData\Roaming\Notepad++\session.xml is opened.
+2024-02-14 01:20:34  C:\Users\Deepak\AppData\Roaming\Notepad++\session.xml  51369/51369 bytes are written.
+2024-02-14 01:20:34  C:\Users\Deepak\AppData\Roaming\Notepad++\session.xml is closed.
+2024-02-14 01:20:34  WM_DESTROY (isEndSessionStarted == true)
+2024-02-19 17:48:54  WM_QUERYENDSESSION (lParam: 0 - ordinary system shutdown/restart) =====================================
+2024-02-19 17:48:54  WM_ENDSESSION (wParam: TRUE, lParam: 0 - ordinary system shutdown/restart)
+2024-02-19 17:48:54  C:\Users\Deepak\AppData\Roaming\Notepad++\config.xml is opened.
+2024-02-19 17:48:54  C:\Users\Deepak\AppData\Roaming\Notepad++\config.xml  11011/11011 bytes are written.
+2024-02-19 17:48:54  C:\Users\Deepak\AppData\Roaming\Notepad++\config.xml is closed.
+2024-02-19 17:48:54  C:\Users\Deepak\AppData\Roaming\Notepad++\session.xml is opened.
+2024-02-19 17:48:54  C:\Users\Deepak\AppData\Roaming\Notepad++\session.xml  54461/54461 bytes are written.
+2024-02-19 17:48:54  C:\Users\Deepak\AppData\Roaming\Notepad++\session.xml is closed.
+2024-02-19 17:48:54  WM_DESTROY (isEndSessionStarted == true)
+2024-02-24 06:37:20  WM_QUERYENDSESSION (lParam: 0 - ordinary system shutdown/restart) =====================================
+2024-02-24 06:37:20  WM_ENDSESSION (wParam: TRUE, lParam: 0 - ordinary system shutdown/restart)
+2024-02-24 06:37:20  C:\Users\Deepak\AppData\Roaming\Notepad++\config.xml is opened.
+2024-02-24 06:37:20  C:\Users\Deepak\AppData\Roaming\Notepad++\config.xml  10962/10962 bytes are written.
+2024-02-24 06:37:20  C:\Users\Deepak\AppData\Roaming\Notepad++\config.xml is closed.
+2024-02-24 06:37:20  C:\Users\Deepak\AppData\Roaming\Notepad++\session.xml is opened.
+2024-02-24 06:37:20  C:\Users\Deepak\AppData\Roaming\Notepad++\session.xml  56382/56382 bytes are written.
+2024-02-24 06:37:20  C:\Users\Deepak\AppData\Roaming\Notepad++\session.xml is closed.
+2024-02-24 06:37:20  WM_DESTROY (isEndSessionStarted == true)
+2024-02-25 21:35:38  WM_QUERYENDSESSION (lParam: 0 - ordinary system shutdown/restart) =====================================
+2024-02-25 21:35:38  WM_ENDSESSION (wParam: TRUE, lParam: 0 - ordinary system shutdown/restart)
+2024-02-25 21:35:38  C:\Users\Deepak\AppData\Roaming\Notepad++\config.xml is opened.
+2024-02-25 21:35:38  C:\Users\Deepak\AppData\Roaming\Notepad++\config.xml  11141/11141 bytes are written.
+2024-02-25 21:35:39  C:\Users\Deepak\AppData\Roaming\Notepad++\config.xml is closed.
+2024-02-25 21:35:39  C:\Users\Deepak\AppData\Roaming\Notepad++\session.xml is opened.
+2024-02-25 21:35:39  C:\Users\Deepak\AppData\Roaming\Notepad++\session.xml  57727/57727 bytes are written.
+2024-02-25 21:35:39  C:\Users\Deepak\AppData\Roaming\Notepad++\session.xml is closed.
+2024-02-25 21:35:39  WM_DESTROY (isEndSessionStarted == true)
+2024-03-01 13:01:48  WM_QUERYENDSESSION (lParam: 0 - ordinary system shutdown/restart) =====================================
+2024-03-01 13:01:48  WM_ENDSESSION (wParam: TRUE, lParam: 0 - ordinary system shutdown/restart)
+2024-03-01 13:01:48  C:\Users\Deepak\AppData\Roaming\Notepad++\config.xml is opened.
+2024-03-01 13:01:48  C:\Users\Deepak\AppData\Roaming\Notepad++\config.xml  11039/11039 bytes are written.
+2024-03-01 13:01:48  C:\Users\Deepak\AppData\Roaming\Notepad++\config.xml is closed.
+2024-03-01 13:01:48  C:\Users\Deepak\AppData\Roaming\Notepad++\session.xml is opened.
+2024-03-01 13:01:48  C:\Users\Deepak\AppData\Roaming\Notepad++\session.xml  57729/57729 bytes are written.
+2024-03-01 13:01:48  C:\Users\Deepak\AppData\Roaming\Notepad++\session.xml is closed.
+2024-03-02 10:54:02  WM_QUERYENDSESSION (lParam: 0 - ordinary system shutdown/restart) =====================================
+2024-03-02 10:54:02  WM_ENDSESSION (wParam: TRUE, lParam: 0 - ordinary system shutdown/restart)
+2024-03-02 10:54:03  C:\Users\Deepak\AppData\Roaming\Notepad++\config.xml is opened.
+2024-03-02 10:54:03  C:\Users\Deepak\AppData\Roaming\Notepad++\config.xml  10443/10443 bytes are written.
+2024-03-02 10:54:03  C:\Users\Deepak\AppData\Roaming\Notepad++\config.xml is closed.
+2024-03-02 10:54:03  C:\Users\Deepak\AppData\Roaming\Notepad++\session.xml is opened.
+2024-03-02 10:54:03  C:\Users\Deepak\AppData\Roaming\Notepad++\session.xml  59153/59153 bytes are written.
+2024-03-02 10:54:03  C:\Users\Deepak\AppData\Roaming\Notepad++\session.xml is closed.
+2024-03-02 10:54:03  WM_DESTROY (isEndSessionStarted == true)
+2024-03-03 04:32:24  WM_QUERYENDSESSION (lParam: 1073741824 - ENDSESSION_CRITICAL) =====================================
+2024-03-03 04:32:24  WM_ENDSESSION (wParam: TRUE, lParam: 1073741824 - ENDSESSION_CRITICAL)
+2024-03-03 04:32:24  C:\Users\Deepak\AppData\Roaming\Notepad++\config.xml is opened.
+2024-03-03 04:32:24  C:\Users\Deepak\AppData\Roaming\Notepad++\config.xml  11089/11089 bytes are written.
+2024-03-03 04:32:24  C:\Users\Deepak\AppData\Roaming\Notepad++\config.xml is closed.
+2024-03-03 04:32:24  C:\Users\Deepak\AppData\Roaming\Notepad++\session.xml is opened.
+2024-03-03 04:32:24  C:\Users\Deepak\AppData\Roaming\Notepad++\session.xml  56905/56905 bytes are written.
+2024-03-03 04:32:24  C:\Users\Deepak\AppData\Roaming\Notepad++\session.xml is closed.
+2024-03-03 04:32:24  WM_DESTROY (isEndSessionStarted == true)

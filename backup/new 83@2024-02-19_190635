@@ -1,0 +1,26 @@
+* 0cc5f9f (HEAD -> dev1) gitTestDev1.0.3.txt
+* a6b1003 gitTestDev1.0.2.txt
+* 360ee00 gitTestDev1.0.1.txt
+* 165cbe3 committed dev1.0.0
+* 4854bb8 committed dev1
+* 50eb6ee (master) initial commit on main
+
+I have moved the head to commit id a6b1003, but want to find the commit id after head, i.e. 0cc5f9f. how can I do so
+
+
+yesterday I brushed up all the jpa concepts.
+I tried to cover the gen ai course, but it's showing as already complted.
+So I went through another ai/ml material from the portal.
+
+today I will go through git and some of the modern java concepts.
+
+
+117866666
+0130131001167
+
+youcan change you commit history after the fact - ask chatgpt what does thie after the fact.
+how far back in time or how far back you wanna go.
+
+Interactive rebase:
+	git rebase -i HEAD~3
+	

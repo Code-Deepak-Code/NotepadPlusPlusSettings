@@ -1,0 +1,27 @@
+Deep Dive with Official Sources:
+
+Java 21 Release Notes: This is your starting point. It provides a comprehensive overview of all Java 21 features, both final and preview: https://openjdk.org/projects/jdk/21/
+
+JDK Enhancement Proposals (JEPs): Each major feature addition in Java 21 has a corresponding JEP document. These are the most in-depth, technical resources:
+
+	Use the search bar on the JEP site to find entries related to "Java 21": https://openjdk.org/jeps/0
+	For example, search "JEP 431" for the Sequenced Collections feature details.
+
+JDK Documentation: Official API documentation dives into each feature's specifics and usage: https://docs.oracle.com/en/java/javase/21/
+
+	Browse through the documentation, focusing on relevant packages and classes introduced in Java 21.
+	
+OpenJDK Blog: While not exclusively "official," the OpenJDK blog often features articles about new features in recent Java releases, including Java 21: https://blogs.oracle.com/java/
+
+	Use the search bar on the blog to find relevant articles.
+	
+Remember:
+Release notes: Get a broad overview.
+
+	JEPs: Understand the nitty-gritty details and design decisions.
+
+	API documentation: Learn how to use the new features in your code.
+
+	OpenJDK blog: Access additional insights and discussions.
+
+	By focusing on these official resources, you can thoroughly explore the features of Java 21 and their implementation details.

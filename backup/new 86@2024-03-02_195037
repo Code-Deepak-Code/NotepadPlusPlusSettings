@@ -1,0 +1,9 @@
+docker run -p 3306:3306 --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:latest
+
+mysql://root:mysql@localhost:8080/mysql
+
+This is my my sql docker running configuration:
+
+docker run -p 8080:8080 --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag
+
+could you please construct a mysql connection string

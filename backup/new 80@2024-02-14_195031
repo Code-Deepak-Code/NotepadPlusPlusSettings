@@ -1,0 +1,63 @@
+100529929891
+
+last tue I also went through some of the jpa theoritical concpets. I explored and brushed up on 
+ all the interfaces and methods of jparepsitory, such as paginationAndSortingRepository, crudreposityr, repostiry.
+ SimpleJpaRepsotiry class etc.
+
+
+Today I have plans to dedicate sometime for mycompenteny assessment.
+Also I will try to brush up on spring data jpa fundamentals as well as 
+I will go through saga design pattern	.
+
+Install Rancher Desktop, Kubernates will automatically be installed.
+
+100529929891
+
+101081778745
+
+position = 1;
+
+	1(H) -> 2 -> 3 -> 4 -> 5 -> null
+	
+	1(C) -> 2 -> 3(H) -> 4 -> 5 -> null
+	
+	1 -> 2 -> 3(H|C) -> 4 -> 5 -> null
+	
+	6(N)
+	
+	
+	
+	
+	
+	{H}|1|next| -> |2|next|-> |3|next|-> |4|next|-> |5|next|-> |6|next|->null
+	
+	|1|next| -> |2|next|-> |3|next|-> |4|next|-> |5|next|-> {H}{C}|6|next|->null
+	
+	|1|next| -> |2|next|-> |3|next|-> |4|next|-> {C}|5|next|-> {H}|6|next|->null
+	
+	{}|7|next|
+
+
+This is linked list I have drawn on notepad++.
+how can I move the pointer to the positon 3 in this linked list, so that previous nodes are also visible in the same diagram in notepad++.
+
+ListNode node = new ListNode(data);
+if(position == 1) {
+	node.next = head;
+	head  = node;
+}
+
+
+ABM AND Candela (UAN as per payslip) - Basic details mismatching on epfo site.
+UAN - 101081778745
+
+Mindgate And Accenture - Service history attached
+UAN - 100529929891
+
+lets.cnct+GithubNewsletter@gmail.com
+
+It's long overdeue - It is gramatically correct?
+
+
+Alexa, play the playlist - Brand New Music.
+

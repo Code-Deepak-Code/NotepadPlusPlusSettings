@@ -1,0 +1,71 @@
+This is the dataSource configuration class in which I have presently configured ecommerce database.
+I want to configure another database nameed transaction_demo in the same DataSourceConfig class in which ecommerce database
+is configured. My goal is to use two databases in one springboot application.
+@Configuration
+public class DataSourceConfig {
+
+    @Bean
+    public DataSource dataSource() {
+        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+        dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/ecommerce?allowPublicKeyRetrieval=true&useSSL=false");
+        dataSource.setUsername("root");
+        dataSource.setPassword("Admin@12345");
+        return dataSource;
+    }
+
+    @Bean
+    public JpaProperties jpaProperties() {
+        JpaProperties properties = new JpaProperties();
+        Map<String, String> hibernateProperties = new HashMap<>();
+        hibernateProperties.put("hibernate.format_sql", "true");
+        hibernateProperties.put("hibernate.show_sql", "true");
+        hibernateProperties.put("hibernate.hbm2ddl.auto", "update");
+        properties.setProperties(hibernateProperties);
+        properties.setShowSql(true);
+        properties.setOpenInView(false);
+        return properties;
+    }
+
+}
+
+I want to add seperate properties to both of these datasources liek below.
+@Bean
+    public JpaProperties jpaProperties() {
+        JpaProperties properties = new JpaProperties();
+        Map<String, String> hibernateProperties = new HashMap<>();
+        hibernateProperties.put("hibernate.format_sql", "true");
+        hibernateProperties.put("hibernate.show_sql", "true");
+        hibernateProperties.put("hibernate.hbm2ddl.auto", "update");
+        properties.setProperties(hibernateProperties);
+        properties.setShowSql(true);
+        properties.setOpenInView(false);
+        return properties;
+    }
+		Have two seperate method but Please keep the properties values same.
+
+I have two datasources two datasources ecommerceDataSource and transactionDemoDataSource in my springboot application.
+ecommerceDataSource is primary datasource. I want to tell springboot to create payments table inside transactionDemoDataSource datasource.
+Is there a way I can specify this in the entity class?
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "payments")
+public class Payment {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String type;
+    private String cardName;
+    private String cardNumber;
+    private int expiryYear;
+    private int expiryMonth;
+    private int cvc;
+    private Long orderId;
+}
+
+ecommerceJpaConfig (field private org.springframework.boot.autoconfigure.orm.jpa.JpaProperties com.demo.jpabasics.commonconfig.EcommerceJpaConfig.ecommerceJpaProperties)

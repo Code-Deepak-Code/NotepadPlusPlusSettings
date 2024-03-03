@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <NotepadPlus>
     <InternalCommands>
-        <Shortcut id="44085" Ctrl="no" Alt="yes" Shift="yes" Key="65" />
+        <Shortcut id="44085" Ctrl="no" Alt="yes" Shift="no" Key="49" />
+        <Shortcut id="44051" Ctrl="no" Alt="yes" Shift="no" Key="97" />
+        <Shortcut id="42047" Ctrl="yes" Alt="no" Shift="yes" Key="81" />
+        <Shortcut id="42015" Ctrl="no" Alt="yes" Shift="no" Key="68" />
+        <Shortcut id="42014" Ctrl="no" Alt="yes" Shift="no" Key="69" />
     </InternalCommands>
     <Macros>
         <Macro name="Trim Trailing Space and Save" Ctrl="no" Alt="yes" Shift="yes" Key="83">
@@ -14,6 +18,8 @@
         <Command name="Wikipedia Search" Ctrl="no" Alt="yes" Shift="no" Key="114">https://en.wikipedia.org/wiki/Special:Search?search=$(CURRENT_WORD)</Command>
         <Command name="Open selected file path in new instance" Ctrl="no" Alt="yes" Shift="no" Key="117">$(NPP_FULL_FILE_PATH) $(CURRENT_WORD) -nosession -multiInst</Command>
     </UserDefinedCommands>
-    <PluginCommands />
+    <PluginCommands>
+        <PluginCommand moduleName="GitSCM.dll" internalID="2" Ctrl="no" Alt="yes" Shift="no" Key="123" />
+    </PluginCommands>
     <ScintillaKeys />
 </NotepadPlus>
